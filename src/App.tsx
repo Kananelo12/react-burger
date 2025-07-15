@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 
 const TopBread = () => <div className="pad bg-amber-500 rounded-t-2xl">Top Bread</div>;
