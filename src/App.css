@@ -1,0 +1,6 @@
+@import "tailwindcss";
+.pad {
+    padding: 1rem;
+    color: #fff;
+    margin: 5px 0;
+}
