@@ -15,11 +15,11 @@ const Burger: React.FC<BurgerProps> = ({ ingredients }) => {
   const renderLayers = () => {
     const layers = [];
     
-    // Always start with top bread
+    // Rendering the top bread layer first
     layers.push(<BurgerLayer key="top-bread" type="topBread" />);
     
     // Add ingredients in order: tomato, meat, lettuce
-    // Tomatoes
+    // Tomate
     for (let i = 0; i < ingredients.tomato; i++) {
       layers.push(<BurgerLayer key={`tomato-${i}`} type="tomato" index={i} />);
     }

@@ -12,9 +12,9 @@ interface Ingredients {
 
 const App = () => {
   const [ingredients, setIngredients] = useState<Ingredients>({
-    tomato: 1,
-    meat: 1,
-    lettuce: 1,
+    tomato: 0,
+    meat: 0,
+    lettuce: 0,
   });
 
   // Function to increase ingredient count
@@ -62,8 +62,8 @@ const App = () => {
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="max-w-6xl w-full">
         <div className="text-center mb-8">
-          <h1 className="text-5xl font-bold text-white mb-2 drop-shadow-lg">
-            🍔 Burger Builder
+          <h1 className="text-5xl font-bold text-white mb-2 drop-shadow-lg px-4">
+            Joey's Burger Builder
           </h1>
           <p className="text-xl text-white/90 font-medium">
             Build your perfect burger, layer by layer!
@@ -76,10 +76,10 @@ const App = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Controls */}
+
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">
-              🎛️ Customize Your Burger
+              Customize Your Burger
             </h2>
             
             {ingredientConfigs.map(({ key, name, emoji, color }) => (
