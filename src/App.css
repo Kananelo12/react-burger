@@ -1,6 +1,122 @@
 @import "tailwindcss";
-.pad {
-    padding: 1rem;
-    color: #fff;
-    margin: 5px 0;
+
+body {
+  font-family: 'Fredoka', cursive;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.ingredient-layer {
+  padding: 0.75rem;
+  color: #fff;
+  margin: 2px 0;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.ingredient-layer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.ingredient-layer:hover::before {
+  left: 100%;
+}
+
+.top-bread {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.tomato {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.meat {
+  background: linear-gradient(135deg, #8B3C2D, #6B2C1F);
+  box-shadow: 0 2px 8px rgba(139, 60, 45, 0.3);
+}
+
+.lettuce {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+
+.base-bread {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 0.5rem 0.5rem 1rem 1rem;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.control-button {
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.control-button:hover {
+  transform: translateY(-1px);
+}
+
+.control-button:active {
+  transform: translateY(0);
+}
+
+.ingredient-control {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.burger-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bounce-in {
+  animation: bounceIn 0.3s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.slide-out {
+  animation: slideOut 0.2s ease-in forwards;
+}
+
+@keyframes slideOut {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
